@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="prisma-cast" src=".github/logo_prisma_systems.svg" width="192px">
+  <img alt="prisma-cast" src=".github/logo_prisma_systems.svg" width="128px">
 </p>
 
 <!-- <h1 align="center">
