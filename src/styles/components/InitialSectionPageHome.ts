@@ -30,10 +30,10 @@ export const Container = styled.div`
       font-weight: 500;
       text-align: justify;
 
-      padding: 2rem 0 4rem 0;
+      padding: 2rem 0 3rem 0;
     }
 
-    button {
+    .buttonContact {
       border: 0;
       border-radius: 1rem;
       padding: 1rem 1.5rem;

@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+
+import { Link } from "react-scroll";
 
 import { Container } from "../styles/components/MenuNavBar";
 
 const MenuNavBar: React.FC = () => {
+  const [positionScroll, setPositionScroll] = useState<boolean>(false);
+
+  function handleScroll() {
+    const position = window.pageYOffset;
+
+    if (position > 96) {
+      setPositionScroll(true);
+    } else {
+      setPositionScroll(false);
+    }
+  }
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <Container>
+    <Container style={{ boxShadow: positionScroll ? "0px 2px 1px -1px rgba(0, 0, 0, 0.1)" : "" }}>
       <div className="logo" title="Prisma Systems">
         <img src="/svg/icon_prisma_systems.svg" alt="Icone/Logo da empresa." />
         <h2>
@@ -12,32 +30,33 @@ const MenuNavBar: React.FC = () => {
           <span className="secondaryText">systems</span>
         </h2>
       </div>
+
       <nav>
         <ul>
-          <li>
-            <a href="/" title="Ir até o Início">
+          <li className="li">
+            <Link to="home" spy={true} smooth={true} offset={-63} duration={1000} title="Ir até o Início">
               Início
-            </a>
+            </Link>
           </li>
-          <li>
-            <a href="/" title="Ir até a sessão Sobre">
+          <li className="li">
+            <Link to="about-us" spy={true} smooth={true} offset={-63} duration={1000} title="Ir até a sessão Sobre">
               Sobre
-            </a>
+            </Link>
           </li>
-          <li>
-            <a href="/" title="Ir até a sessão de Serviços ">
+          <li className="li">
+            <Link to="services" spy={true} smooth={true} offset={-63} duration={1000} title="Ir até a sessão de Serviços ">
               Serviços
-            </a>
+            </Link>
           </li>
-          <li>
-            <a href="/" title="Ir até a sessão de Depoimentos ">
+          <li className="li">
+            <Link to="testimonials" spy={true} smooth={true} offset={-63} duration={1000} title="Ir até a sessão de Depoimentos ">
               Depoimentos
-            </a>
+            </Link>
           </li>
-          <li>
-            <a href="/" title="Ir até a sessão de Contatos ">
+          <li className="li">
+            <Link to="contact" spy={true} smooth={true} offset={-63} duration={1000} title="Ir até a sessão de Contatos ">
               Contato
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

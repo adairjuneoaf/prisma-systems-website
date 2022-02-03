@@ -12,7 +12,7 @@ export const Container = styled.div`
   color: ${(props) => props.theme.colors.text};
   background: ${(props) => props.theme.colors.background};
 
-  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1);
+  //box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.1);
 
   display: flex;
   align-items: center;
@@ -20,6 +20,8 @@ export const Container = styled.div`
   justify-content: space-between;
 
   cursor: default;
+
+  transition: box-shadow 0.3s ease-in-out;
 
   .logo {
     flex: 2;
