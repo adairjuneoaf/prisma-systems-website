@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 import { lighten } from "polished";
 
-export const Container = styled.div`
+export const Container = styled.section`
   width: 100%;
   height: calc(100vh - 64px);
 
@@ -19,6 +19,10 @@ export const Container = styled.div`
     line-height: 1.5;
     padding: 5rem 0;
   }
+`;
+
+export const Content = styled.section`
+  width: 100%;
 
   .testimonials {
     display: flex;
@@ -34,9 +38,11 @@ export const Container = styled.div`
 
       gap: 1.5rem;
       padding: 1.5rem;
-      border-radius: 8px;
+      border-radius: 16px;
 
-      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08);
+      // box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08);
+
+      // border: 1px solid rgba(0, 0, 0, 0.04);
 
       > p {
         font-size: 0.875rem;
@@ -62,6 +68,8 @@ export const Container = styled.div`
         align-items: center;
         flex-direction: row;
         justify-content: flex-start;
+
+        padding-bottom: 2rem;
 
         gap: 1rem;
 

@@ -6,6 +6,8 @@ export default createGlobalStyle`
     --black-gray-prisma: #313131;
     --yellow-medium-prisma: #FEA82F;
     --orange-medium-prisma: #FE6401;
+    
+    --swiper-theme-color: #FE6401;
 }
 
 * {
