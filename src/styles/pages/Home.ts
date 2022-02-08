@@ -23,7 +23,7 @@ export const Content = styled.section`
   }
 
   @media only screen and (max-width: 600px) {
-    width: calc(100% - 10rem);
+    width: calc(100% - 6rem);
   }
 
   @media only screen and (min-width: 600px) {

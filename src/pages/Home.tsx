@@ -2,7 +2,10 @@ import React from "react";
 
 import { motion } from "framer-motion";
 
+import { useWindowSize } from "../hooks/useWindowSize";
+
 import MenuNavBar from "../components/MenuNavBar";
+import MenuMobileNavBar from "../components/MenuMobileNavBar";
 import InitialSectionHome from "../components/InitialSectionPageHome";
 import FooterSectionPageHome from "../components/FooterSectionPageHome";
 import AboutUsSectionPageHome from "../components/AboutUsSectionPageHome";
@@ -13,6 +16,8 @@ import TestimonialsSectionPageHome from "../components/TestimonialsSectionPageHo
 import { Container, Content } from "../styles/pages/Home";
 
 const Home: React.FC = () => {
+  const sizeWindow = useWindowSize();
+
   const varAnimationAxleYFramerMotion = {
     visible: { y: 0, opacity: 1 },
     hidden: { y: -100, opacity: 0 },
@@ -21,7 +26,7 @@ const Home: React.FC = () => {
   return (
     <Container>
       <motion.div initial="hidden" animate="visible" variants={varAnimationAxleYFramerMotion} transition={{ ease: "easeInOut", duration: 0.8 }}>
-        <MenuNavBar />
+        {sizeWindow.width < 992 ? <MenuMobileNavBar /> : <MenuNavBar />}
       </motion.div>
       <div id="home" />
 

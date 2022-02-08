@@ -80,6 +80,12 @@ export const Container = styled.div`
     }
   }
 
+  @media only screen and (max-width: 600px) {
+    h1 {
+      text-align: center;
+    }
+  }
+
   @media (max-width: 768px) {
     > p {
       max-width: 100%;
