@@ -4,20 +4,20 @@ import { darken } from "polished";
 
 export const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 1px);
+  height: 100vh;
 
   display: flex;
   align-items: center;
   flex-direction: row;
 
-  //padding: 5rem 0;
+  padding: 5rem 0;
 
   section.left {
     flex: 1;
     cursor: default;
 
     h1 {
-      font-size: 2rem;
+      //font-size: 2rem;
       padding: 1rem 0;
       line-height: 1.5;
 
@@ -25,7 +25,7 @@ export const Container = styled.div`
     }
 
     p {
-      font-size: 1rem;
+      //font-size: 1rem;
       line-height: 1.5;
       font-weight: 500;
       text-align: justify;
@@ -38,7 +38,7 @@ export const Container = styled.div`
       border-radius: 1rem;
       padding: 1rem 1.5rem;
 
-      font-size: 1rem;
+      //font-size: 1rem;
       font-weight: 700;
 
       color: ${(props) => props.theme.colors.background};
@@ -65,6 +65,64 @@ export const Container = styled.div`
 
     > img {
       width: 80%;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 3rem;
+
+    section.left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      > h1 {
+        text-align: center;
+      }
+
+      .buttonContact {
+        width: 100%;
+      }
+    }
+
+    section.right {
+      > img {
+        margin: 0 auto;
+        width: 70%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 3rem;
+
+    section.left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      > h1 {
+        text-align: center;
+      }
+
+      .buttonContact {
+        width: 100%;
+      }
+    }
+
+    section.right {
+      > img {
+        margin: 0 auto;
+        width: 80%;
+      }
     }
   }
 `;

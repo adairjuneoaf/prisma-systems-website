@@ -7,8 +7,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import { Container, Content } from "../styles/components/TestimonialsSectionPageHome";
+import { useWindowSize } from "../hooks/useWindowSize";
 
 const TestimonialsSectionPageHome: React.FC = () => {
+  const sizeWindow = useWindowSize();
+
   return (
     <Container>
       <h1>Depoimentos de quem faz parte da nossa história</h1>
@@ -16,7 +19,7 @@ const TestimonialsSectionPageHome: React.FC = () => {
         <Swiper
           modules={[Pagination, Autoplay]}
           spaceBetween={32}
-          slidesPerView={2}
+          slidesPerView={sizeWindow.width > 1200 ? 2 : 1}
           className="testimonials"
           pagination={{ clickable: true }}
           autoplay={{ delay: 5000, disableOnInteraction: false }}

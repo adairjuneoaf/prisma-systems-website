@@ -4,12 +4,14 @@ import { darken } from "polished";
 
 export const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 64px);
+  height: auto;
 
   display: flex;
   align-items: center;
   flex-direction: row;
   justify-content: center;
+
+  padding: 5rem 0;
 
   gap: 4rem;
 
@@ -18,14 +20,14 @@ export const Container = styled.div`
   .left {
     flex: 2;
     > h1 {
-      font-size: 2rem;
+      // font-size: 2rem;
       line-height: 1.4;
 
       padding: 1rem 0;
     }
 
     > p {
-      font-size: 1rem;
+      // font-size: 1rem;
       line-height: 1.4;
       font-weight: 500;
       padding-bottom: 1rem;
@@ -80,8 +82,27 @@ export const Container = styled.div`
       align-items: center;
       flex-direction: row;
 
-      font-size: 1rem;
+      font-size: 0.875rem;
       font-weight: 500;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+
+    .left {
+      p {
+        text-align: justify;
+      }
+
+      > button {
+        width: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     }
   }
 `;

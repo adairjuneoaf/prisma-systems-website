@@ -4,7 +4,9 @@ import { lighten } from "polished";
 
 export const Container = styled.section`
   width: 100%;
-  height: calc(100vh - 64px);
+  height: auto;
+
+  padding: 5rem 0;
 
   display: flex;
   align-items: center;
@@ -14,7 +16,7 @@ export const Container = styled.section`
   cursor: default;
 
   > h1 {
-    font-size: 2rem;
+    // font-size: 2rem;
     font-weight: 700;
     line-height: 1.5;
     padding: 5rem 0;
@@ -45,7 +47,7 @@ export const Content = styled.section`
       // border: 1px solid rgba(0, 0, 0, 0.04);
 
       > p {
-        font-size: 0.875rem;
+        // font-size: 0.875rem;
         font-weight: 300;
         line-height: 1.5;
         text-align: justify;
@@ -56,7 +58,7 @@ export const Content = styled.section`
         }
 
         .highlightedTestimonial {
-          font-size: 2rem;
+          font-size: 1.875rem;
           line-height: 0;
           font-weight: 500;
           color: ${(props) => props.theme.colors.orange_prisma};

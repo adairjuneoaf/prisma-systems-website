@@ -4,6 +4,8 @@ export const Container = styled.div`
   width: 100%;
   height: auto;
 
+  padding: 5rem 0;
+
   background: ${(props) => props.theme.colors.orange_prisma};
   color: ${(props) => props.theme.colors.text};
 `;
@@ -14,7 +16,7 @@ export const Content = styled.div`
 
   margin: 0 auto;
 
-  padding: 3rem 0;
+  //padding: 3rem 0;
 
   display: flex;
   align-items: center;
@@ -53,6 +55,40 @@ export const Content = styled.div`
 
     a {
       font-size: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+
+    gap: 3rem;
+
+    .left {
+      align-items: center;
+      justify-content: center;
+    }
+    .right {
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+
+    gap: 4rem;
+
+    .left {
+      align-items: center;
+      justify-content: center;
+    }
+    .right {
+      gap: 3rem;
     }
   }
 `;

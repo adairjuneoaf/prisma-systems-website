@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  height: calc(100vh - 64px);
+  height: auto;
+
+  padding: 5rem 0;
 
   display: flex;
   align-items: center;
@@ -12,7 +14,7 @@ export const Container = styled.div`
   cursor: default;
 
   h1 {
-    font-size: 2rem;
+    // font-size: 2rem;
     font-weight: 700;
     line-height: 1.5;
     padding: 1rem 0;
@@ -21,7 +23,7 @@ export const Container = styled.div`
   > p {
     max-width: 50%;
     padding: 1rem 0;
-    font-size: 1rem;
+    // font-size: 1rem;
     font-weight: 500;
     line-height: 1.5;
     text-align: justify;
@@ -68,12 +70,58 @@ export const Container = styled.div`
 
         > p {
           width: 100%;
+          font-size: 0.8125rem;
           font-weight: 500;
           line-height: 1.4;
           min-height: 8rem;
           text-align: center;
         }
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    > p {
+      max-width: 100%;
+    }
+
+    div.cards {
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    > p {
+      max-width: 80%;
+    }
+
+    div.cards {
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 2rem;
+    }
+  }
+
+  @media (max-width: 1200px) {
+    > p {
+      max-width: 80%;
+    }
+
+    div.cards {
+      display: flex;
+      align-content: center;
+      flex-direction: column;
+      justify-content: center;
+
+      gap: 2rem;
     }
   }
 `;
